@@ -126,7 +126,20 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 60px 20px;
+    color: #ddd;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);  /* Subtle inner shadow for depth */
+}
+
+/* About Me Content */
+.about-container {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);  /* Slightly darker background */
+    border-radius: 10px;  /* Rounded corners for depth */
+    padding: 30px;
 }
 
 .about-title {
@@ -137,50 +150,88 @@ section {
 }
 
 .about-content {
-    max-width: 800px;
     font-size: 18px;
     line-height: 1.6;
     color: #ddd;
-    text-align: center;
-    margin-bottom: 30px;
+    max-width: 800px;
+    margin-bottom: 40px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);  /* Slight background to emphasize content */
+    border-radius: 10px;
 }
 
+/* Experience Section */
+.experience {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);  /* Background color for the experience section */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Box shadow for depth */
+}
+
+.experience h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #a1c4c9;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: #ddd;
+}
+
+/* Toolbox Section */
 .toolbox-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
-    justify-items: center;
+    width: 100%;
     max-width: 1000px;
-    margin: 30px auto;
+    margin: 40px auto;
     padding: 0 20px;
+    text-align: center;
+}
+
+.toolbox-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #a1c4c9;
+    margin-bottom: 20px;
+}
+
+.toolbox-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .toolbox-item {
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.1);  /* Background color for items */
     color: #fdf7f1;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
     text-align: center;
     text-transform: capitalize;
     letter-spacing: 1px;
-    box-shadow: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Box shadow for depth */
     cursor: pointer;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.toolbox-icon {
-    width: 20px;
-    height: 20px;
-    transition: color 0.2s ease;
+    min-width: 120px;
 }
 
 .toolbox-item:hover {
     color: #a1c4c9;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .toolbox-item:active {
@@ -195,25 +246,13 @@ section {
     gap: 10px;
 }
 
-.experience {
-    margin-top: 40px;
-    text-align: center;
+.toolbox-icon {
+    width: 20px;
+    height: 20px;
+    transition: color 0.2s ease;
 }
 
-.experience h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
 
-.experience-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    font-size: 18px;
-    color: #ddd;
-}
 
 /* Projects Section */
 #projects {
