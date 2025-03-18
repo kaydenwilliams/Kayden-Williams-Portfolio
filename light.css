@@ -52,6 +52,22 @@ nav {
   color: #a1c4c9; 
 }
 
+/* Light/Dark Mode Toggle */
+#themeToggle {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #2c3e50; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#themeToggle:hover {
+  background-color: #dee1e1;
+}
+
 /* Sections - Full Screen */
 section {
   height: 100vh;
@@ -60,66 +76,52 @@ section {
   align-items: center;
   text-align: center;
   padding: 40px;
-  background-color: #ffffff; 
-  color: #2c3e50; 
 }
 
 /* Home Section */
 #home {
-  background: linear-gradient(135deg, #ffffff 0%, #ecf0f1 100%); 
+  background: linear-gradient(135deg, #eef2f3 0%, #dce0e3 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #2c3e50; 
-  padding: 0 20px;
+  color: #2c3e50;
+  padding: 60px 20px;
+  min-height: 100vh;
 }
 
-.home-container {
-  max-width: 800px;
-  padding: 40px 30px;
-  background-color: rgba(255, 255, 255, 0.9); 
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.home-container h {
-  font-size: 28px;
-  font-weight: 300;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-  color: #2c3e50; 
-}
-
+/* Heading Styles */
 .home-container h1 {
-  font-size: 60px;
+  font-size: 56px;
   font-weight: 700;
-  margin-bottom: 15px;
-  color: #2c3e50; 
+  margin-bottom: 10px;
+  color: #2c3e50;
 }
 
 .home-container h6 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
-  margin-top: 20px;
-  color: #7f8c8d; 
+  margin-bottom: 25px;
+  color: #7f8c8d;
 }
 
+/* Button Styles */
 .home-button {
-  background-color: #a1c4c9; 
-  color: #fff; 
-  padding: 15px 30px;
+  background: linear-gradient(135deg, #6a85b6 0%, #bac8e0 100%);
+  color: #fff;
+  padding: 14px 32px;
   font-size: 18px;
   font-weight: 600;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  margin-top: 30px;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .home-button:hover {
-  background-color: #88a4a9;
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #5a75a6 0%, #a9bbd8 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* About Section */
@@ -152,17 +154,6 @@ section {
   color: #2c3e50; 
 }
 
-.about-content {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #2c3e50; 
-  max-width: 800px;
-  margin: 0 auto 40px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-}
-
 /* Experience Section */
 .experience {
   margin-top: 20px;
@@ -175,13 +166,6 @@ section {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.experience h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #2c3e50; 
 }
 
 .experience-list {
@@ -261,7 +245,7 @@ section {
 
 /* Projects Section */
 #projects {
-  background: linear-gradient(135deg, #ffffff 0%, #ecf0f1 100%); 
+  background: linear-gradient(135deg, #ffffff 0%, #ecf0f1 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -273,7 +257,6 @@ section {
   font-weight: 700;
   margin-bottom: 30px;
   color: #2c3e50;
-  text-align: center;
 }
 
 .project-container {
@@ -282,7 +265,6 @@ section {
   gap: 20px;
   max-width: 1000px;
   width: 100%;
-  padding: 0 20px;
 }
 
 .project-card {
@@ -293,7 +275,6 @@ section {
   backdrop-filter: blur(10px);
   transition: 0.3s ease-in-out;
   text-align: center;
-  color: #2c3e50; 
 }
 
 .project-card:hover {
@@ -305,7 +286,6 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #2c3e50; 
 }
 
 .links {
@@ -344,11 +324,11 @@ section {
 }
 
 .contact-card {
-  background-color: rgba(255, 255, 255, 0.9);
   padding: 30px;
   width: 400px;
+  background-color: rgba(255, 255, 255, 0.9); 
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -360,4 +340,28 @@ section {
   font-size: 18px;
   font-weight: 400;
   color: #2c3e50
+}
+
+.contact-info i {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-size: 22px;
+  transition: 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  color: #a1c4c9;
+  transform: scale(1.1);
 }
