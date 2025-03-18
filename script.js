@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const themeToggle = document.getElementById("themeToggle");
+    const themeToggle = document.getElementById("darkmode-toggle");
     const themeStylesheet = document.getElementById("themeStylesheet");
 
     const savedTheme = localStorage.getItem("theme");
@@ -8,10 +8,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     themeToggle.addEventListener("click", () => {
-        const isLight = themeStylesheet.href.endsWith("light.css");
-        const newTheme = isLight ? "dark.css" : "light.css";
+        const isDark = themeStylesheet.href.split("/").pop() === "dark.css"; 
+        const newTheme = isDark ? "light.css" : "dark.css";
 
         themeStylesheet.href = newTheme;
         localStorage.setItem("theme", newTheme);
     });
+
+    const hamburger = document.querySelector(".hamburger");
+    const navLinksContainer = document.querySelector("nav");
+
+    if (hamburger && navLinksContainer) {
+        hamburger.addEventListener("click", () => {
+            navLinksContainer.classList.toggle("show");
+        });
+    } else {
+        console.error("Hamburger menu or navigation container not found.");
+    }
 });
