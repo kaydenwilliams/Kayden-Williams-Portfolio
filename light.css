@@ -116,12 +116,27 @@ section {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  outline: none; 
+  text-transform: uppercase; 
 }
 
 .home-button:hover {
   background: linear-gradient(135deg, #5a75a6 0%, #a9bbd8 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px); 
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); 
+  animation: pulse 1s infinite; 
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateY(-4px);
+  }
+  50% {
+    transform: translateY(-6px); 
+  }
+  100% {
+    transform: translateY(-4px);
+  }
 }
 
 /* About Section */
